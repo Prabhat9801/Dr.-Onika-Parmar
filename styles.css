@@ -1,0 +1,595 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Style for the header */
+header {
+    background-color: #242424;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #26d07c;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #26d07c;
+    border-radius: 5px;
+}
+
+/* Style for the hero section */
+.hero {
+    background-image: url('Image/Dr. Onika.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center; /* Centers the focal point of the image */
+    background-repeat:space;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 100, 0, 0.5); /* Green overlay for the background */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #26d07c;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #1aa064;
+    transform: scale(1.05);
+}
+
+/* Add some animations */
+.hero-content h1, .hero-content h2, .hero-content p, .btn {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for the services section */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services h2 span {
+    color: #26d07c;
+}
+
+.services .call {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.services .description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon img {
+    width: 200px;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #26d07c;
+}
+
+.service p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Style for the My Services section */
+.my-services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.my-services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.my-services .services-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.service-item img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the Testimonial Section */
+.testimonial-section {
+    background-color: #00b74f; /* Use the green background color */
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.testimonial-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: none; /* Hide all testimonials initially */
+}
+
+.testimonial-show {
+    display: block; /* Show the active testimonial */
+}
+
+.testimonial-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.testimonial-description {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.testimonial-author {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.testimonial-author img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.testimonial-author p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* Style for the Course Packages Section */
+.course-packages {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.course-packages h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.packages-description {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.package-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.package-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.package-item ul li {
+    margin-bottom: 10px;
+}
+
+.package-item .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.package-item .price span {
+    display: block;
+    font-size: 14px;
+    color: #999;
+}
+
+.package-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+}
+/* Appointment Section */
+.appointment-section {
+    background-color: #28a745; /* Use a green background similar to the testimonial section */
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.appointment-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.appointment-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.appointment-content .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.appointment-content .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+/* Meeting Section */
+.meeting-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.meeting-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.meeting-table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.meeting-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.meeting-table th, .meeting-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.meeting-table th {
+    background-color: #26d07c;
+    color: white;
+}
+
+.meeting-table td {
+    color: #333;
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #26d07c;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #26d07c;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #1aa064;
+    transform: scale(1.05);
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
+}
+
+/* Appointment Section */
+
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #66CDAA;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #66CDAA;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #66CDAA;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+
