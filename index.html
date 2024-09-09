@@ -14,6 +14,11 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+body {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -289,7 +294,44 @@ nav ul li a:hover {
     font-size: 14px;
     color: #555;
 }
+@media (max-width: 768px) {
+    .services h2 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+    }
 
+    .services .call {
+        font-size: 20px; /* Adjust font size for contact number */
+    }
+
+    .services .description {
+        font-size: 14px; /* Adjust font size for description */
+        margin-bottom: 20px; /* Adjust margin for better spacing */
+    }
+
+    .service-list {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .service {
+        width: 100%; /* Allow items to take full width of container */
+        max-width: 400px; /* Set a max-width for better fit on larger screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .service-icon img {
+        width: 150px; /* Adjust image width for smaller screens */
+        height: auto; /* Allow image height to scale proportionally */
+    }
+
+    .service h3 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .service p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
 /* Style for the My Services section */
 .my-services {
     text-align: center;
@@ -342,7 +384,34 @@ nav ul li a:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 768px) {
+    .my-services h2 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+    }
 
+    .my-services .services-description {
+        font-size: 14px; /* Adjust font size for description */
+        margin-bottom: 20px; /* Adjust margin for better spacing */
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack items vertically on small screens */
+    }
+
+    .service-item {
+        max-width: 100%; /* Allow items to take full width of container */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .service-item img {
+        height: auto; /* Allow images to scale properly */
+        max-height: 200px; /* Limit maximum height for better fit */
+    }
+
+    .service-item p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
 /* Style for the Testimonial Section */
 .testimonial-section {
     background-color: #00b74f; /* Use the green background color */
@@ -463,6 +532,40 @@ nav ul li a:hover {
 .package-item:hover {
     transform: translateY(-10px);
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+    .course-packages h2 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+    }
+
+    .packages-description {
+        font-size: 14px; /* Adjust description font size */
+        margin-bottom: 30px; /* Adjust spacing for smaller screens */
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr; /* Stack items in a single column on smaller screens */
+    }
+
+    .package-item {
+        padding: 20px 15px; /* Adjust padding for better fit */
+    }
+
+    .package-item h3 {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    .package-item ul {
+        font-size: 13px; /* Reduce font size for list items */
+    }
+
+    .package-item .price {
+        font-size: 20px; /* Adjust price font size */
+    }
+
+    .package-item .price span {
+        font-size: 12px; /* Adjust span font size */
+    }
 }
 /* Appointment Section */
 .appointment-section {
@@ -683,11 +786,42 @@ nav ul li a:hover {
     margin: 0;
     font-size: 14px;
 }
-
 @media (max-width: 768px) {
-   width: 80%;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-section h4 {
+        font-size: 16px; /* Adjust heading size for smaller screens */
+    }
+
+    .footer-section p,
+    .footer-section ul {
+        font-size: 14px; /* Adjust font size for text and list items */
+    }
+
+    .footer-section ul {
+        padding-left: 0;
+    }
+
+    .social-icons a {
+        font-size: 18px; /* Adjust icon size for smaller screens */
+        margin-right: 10px; /* Adjust spacing between icons */
+    }
+
+    .footer-bottom {
+        font-size: 12px; /* Adjust font size for the footer bottom text */
+    }
 }
 
+@media (max-width: 768px) {
     .services .service-list {
        display: flex;
     }
@@ -697,7 +831,7 @@ nav ul li a:hover {
     .course-packages .packages-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         display: flex;
-        align-items: centre;
+        justify-content: space-evenly;
        
     }
 }
